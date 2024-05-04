@@ -1,0 +1,16 @@
+Run time analysis for the give tasks in the assignment:
+
+Task0:
+The run time analysis (Worst case Big-O Notation) for this task is O(1) since it takes constant time to read the first and last elements using index in list.
+
+Task1:
+The run time analysis for this task is O(n) since I am iterating over all the number in a loop to find the different numbers using a set.
+
+Task2:
+The run time analysis for this task is O(n). In my solution, I am using a dictionary to save the total duration of call for a number and iterating over that dictionary to find the maximum of duration.
+
+Task3:
+The run time analysis for this task is O(nlogn) since I use .sort() method for sorting a list and it is contributing for the worst case time complexity.
+
+Task4:
+The run time analysis for this task is O(nlogn) since I use .sort() method for sorting a list and it is contributing for the worst case time complexity and the rest of the logic would take less than that.
