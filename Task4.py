@@ -7,17 +7,13 @@ import csv
 telemarketers = set()
 non_telemarketers = set()
 
-def is_telemarketer(number):
-    return str(number).startswith('140')
 
 with open('texts.csv', 'r') as f:
     reader = csv.reader(f)
     texts = list(reader)
     for text in texts:
-        if is_telemarketer(text[0]):
-            non_telemarketers.add(text[0])
-        if is_telemarketer(text[1]):
-            non_telemarketers.add(text[1])
+        non_telemarketers.add(text[0])
+        non_telemarketers.add(text[1])
 
 
 
@@ -26,10 +22,8 @@ with open('calls.csv', 'r') as f:
     calls = list(reader)
 
     for call in calls:
-        if is_telemarketer(call[0]):
-            telemarketers.add(call[0])
-        if is_telemarketer(call[1]):
-            non_telemarketers.add(call[1])
+        telemarketers.add(call[0])
+        non_telemarketers.add(call[1])
 
 print("These numbers could be telemarketers: ")
 
